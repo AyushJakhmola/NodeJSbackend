@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /root/node-express-realworld-example-app
+    overwrite: true
+hooks:
+  ApplicationStop:
+    - location: scripts/stop_script.sh
+      timeout: 300
+  ApplicationStart:
+    - location: scripts/start_script.sh
+      timeout: 300
+
