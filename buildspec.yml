@@ -3,15 +3,6 @@ env:
     DB_HOST: "DB_Host"
 
 phases:
-  pre_build:
-    commands:
-      - apt update -y
-      - echo "Installing Nodejs dependencies"
-      - apt-get install net-tools
-      - curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -  
-      - apt-get install gcc make -y
-      - apt-get install nodejs -y
-      - npm  install pm2@latest -g
   build:
     commands:
       - sed -i 's/localhost/'$DB_HOST'/' app.js
