@@ -1,13 +1,31 @@
 version: 0.2
+
 run-as: root
+
 env:
   parameter-store:
-    DB_HOST: "DB_Host"
+    MongoDb_url: "/mongo/url"
 
 phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+    commands:
+      - echo Installing...
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies.
+      - npm install
   build:
     commands:
-      - sed -i 's/localhost/'$DB_HOST'/' app.js
+      - sed -i "s/mongodb://localhost/conduit/"$MongoDb_url"/" app.js
+      - echo Building ...
+
+  post_build:
+    commands:
+      - echo Build complete
+
 artifacts:
   files:
     - '**/*'
+    - echo Uploaded Artifacts
