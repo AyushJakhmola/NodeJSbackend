@@ -1,3 +1,3 @@
 #!/bin/bash
-   pm2 stop all
-
+pm2 stop /home/ubuntu/node-express-realworld-example-app/app.js
+echo Server stopped
