@@ -1,5 +1,4 @@
 #!/bin/bash
-   npm install
-   npm i dotenv
-   pm2 start app.js
+pm2 start /home/ubuntu/node-express-realworld-example-app/app.js
+echo Server started
 
