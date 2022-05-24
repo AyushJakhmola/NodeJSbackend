@@ -10,14 +10,14 @@ files:
 
 hooks:
   BeforeInstall:
-    - location: script/install.sh
+    - location: scripts/install.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: script/stop.sh
+    - location: scripts/stop_script.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: script/start.sh
+    - location: scripts/start_script.sh
       timeout: 300
       runas: root
