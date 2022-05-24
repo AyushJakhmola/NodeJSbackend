@@ -1,4 +1,4 @@
-#!/bin/bash
-pm2 start /home/ubuntu/node-express-realworld-example-app/app.js
-echo Server started
 
+#!/bin/bash
+pm2 start /home/ubuntu/NodeJSbackend/app.js
+echo Server started
