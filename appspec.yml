@@ -4,20 +4,20 @@ runas: root
 
 files:
   - source: /
-    destination: /home/ubuntu/node-express-realworld-example-app
+    destination: /home/ubuntu/NodeJSbackend
     overwrite: true
     timeout: 300
 
 hooks:
   BeforeInstall:
-    - location: scripts/install.sh
+    - location: script/install.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/stop_script.sh
+    - location: script/stop.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: scripts/start_script.sh
+    - location: script/start.sh
       timeout: 300
       runas: root
