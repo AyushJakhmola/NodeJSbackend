@@ -6,7 +6,7 @@ apt-get update
 #apt-get install nodejs -y
 #npm  install pm2@latest -g
 
-cd /home/ubuntu/node-express-realworld-example-app
+cd /home/ubuntu/NodeJSbackend
 sudo apt install npm -y
 sudo npm install npm -g
 sudo npm install -d
