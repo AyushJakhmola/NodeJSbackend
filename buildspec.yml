@@ -9,7 +9,7 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 12
+      nodejs: 14
     commands:
       - echo Installing...
   pre_build:
@@ -18,7 +18,7 @@ phases:
       - npm install
   build:
     commands:
-      - sed -i 's/localhost/"$MongoDb_url"/' app.js
+      - sed -i "s/localhost/"$MongoDb_url"/" app.js
       - echo Building ...
 
   post_build:
