@@ -6,4 +6,5 @@ sudo apt-get install gcc make -y
 sudo apt-get install nodejs -y
 sudo apt-get upgrade -y
 sudo npm install pm2@latest -g
+npm install
 
