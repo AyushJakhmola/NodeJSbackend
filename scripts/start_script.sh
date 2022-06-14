@@ -1,3 +1,5 @@
 
 #!/bin/bash
-pm2 start /home/ubuntu/NodeJSbackend/app.js
+cd /home/ubuntu/NodeJSbackend
+pm2 start app.js
+
