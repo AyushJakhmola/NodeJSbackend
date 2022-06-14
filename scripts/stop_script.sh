@@ -1,2 +1,3 @@
 #!/bin/bash
-pm2 stop all
+cd /home/ubuntu/NodeJSbackend
+pm2 stop app.js
