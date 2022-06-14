@@ -18,7 +18,7 @@ phases:
       - npm install
   build:
     commands:
-      - sed -i "s|mongodb://localhost/conduit|"$MongoDb_url"|" app.js
+      - sed -i "s|localhost|"$MongoDb_url"|" app.js
       - echo Building ...
 
   post_build:
